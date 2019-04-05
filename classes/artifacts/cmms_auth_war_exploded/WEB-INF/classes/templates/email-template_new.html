@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
+    <meta name="description" content=""></meta>
+    <meta name="author" content=""></meta>
+
+    <title>BVN</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css}"></link>
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css}" rel="stylesheet"></link>
+    <!-- Material Design Bootstrap -->
+    <link th:href="@{https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css}" rel="stylesheet"></link>
+
+    <style>
+        .card-header{background-color: wheat}
+        .borderless td, .borderless th {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <div class="card" style="margin-top: 10%">
+                <div class="card-header text-center">
+                    <div><img src="/static/image/nibss.png" style="height: 10%; width: 10%"></img></div>
+                    <span style="font-size: 30px; font-family: Cambria"> Nigerian Inter-Bank Settlement System PLC </span>
+                </div>
+                <div class="card-body">
+                    <div class="container text-center">
+                        <h4 class="card-title" th:text="${title}">CMMS VALIDATION CREDENTIALS</h4>
+                        <hr></hr>
+                        <p class="card-text" th:text="${subtitle}"> Kindly find your new login credentials below:</p><br></br><br></br>
+
+                        <table class="table borderless table-sm">
+                            <tbody class="col-2" th:utext="${details}">
+<!--                            <tr>
+                                <td class="text-right">Agent Name:</td>
+                                <td class="text-left">Mark Mark</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">Username:</th>
+                                <td class="text-left">Jacob251</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">Password:</th>
+                                <td class="text-left">3#Aec56+{hY</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">{{Object}}:</th>
+                                <td class="text-left">{{object}}</td>
+                            </tr>-->
+                            </tbody>
+                        </table>
+                        <br></br>
+
+                        <hr></hr>
+                        <div class="card-text"> Powered By <a href="https://nibss-plc.com.ng"
+                                                              style="text-decoration: none">NIBSS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
